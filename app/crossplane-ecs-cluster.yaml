@@ -13,4 +13,4 @@ spec:
       - key: Type
         value: cluster-creation
   providerConfigRef:
-    name: aws-provider-config
+    name: aws-provider
