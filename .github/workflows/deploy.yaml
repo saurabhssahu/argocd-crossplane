@@ -20,11 +20,3 @@ jobs:
       run: |
         aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
         aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-
-    - name: Install Crossplane CLI
-      run: |
-        curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh
-        
-    - name: Apply Crossplane configuration
-      run: |
-        kubectl apply -f crossplane-config.yaml
