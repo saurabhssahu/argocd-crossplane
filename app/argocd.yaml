@@ -9,7 +9,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/saurabhssahu/argocd-crossplane.git
-    path: app
+    path: app/
   destination:
     server: https://kubernetes.default.svc
     namespace: crossplane-system
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
