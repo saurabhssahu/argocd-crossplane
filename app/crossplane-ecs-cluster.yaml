@@ -1,0 +1,16 @@
+apiVersion: ecs.aws.crossplane.io/v1alpha1
+kind: Cluster
+metadata:
+  name: sahus-ecs-cluster
+spec:
+  forProvider:
+    clusterName: sahus-ecs-cluster
+    region: eu-north-1
+    capacityProviders:
+      - FARGATE
+      - FARGATE_SPOT
+    tags:
+      - key: Type
+        value: cluster-creation
+  providerConfigRef:
+    name: aws-provider-config
